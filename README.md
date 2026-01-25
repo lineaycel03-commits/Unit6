@@ -1,7 +1,7 @@
 ### Bioinformatics Assignment: Sequence Alignment and Functional Annotation
 ### 1. Formatting a Sequence Collection for BLAST:
 ## Exe1)
-To prepare the database, the following sequence of commands was used:
+To prepare the database, the following sequence of commands were used:
 ### Step 1: The original file was in a compressed Gzip format. We used the gunzip command to decompress it in a standard FASTA File 
 gunzip uniprot_Atha.fasta.gz
 ### Step 2: We then used the makeblastdb to convert the FASTA protein sequences into a binary format that BLAST can search efficiently
