@@ -177,9 +177,11 @@ Task	Search / Goal	Result / GO ID	Category (Aspect)	Findings / Counts
 
 ### Arabidopsis thaliana 
 •	Distinct Gene Products: Over 14,000 proteins 
+
 •	Total BP Annotations: Over 65,000 annotations 
 ### Prunus persica 
 •	Distinct Gene Products: Only 332 distinct gene products currently have experimental backing in this dataset.
+
 •	Total BP Annotations: A total of 423 annotations supported by experimental evidence.
 ## 8. Predicting 3D structure
 ### Exe10)
