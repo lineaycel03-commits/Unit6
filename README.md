@@ -1,4 +1,11 @@
-### Bioinformatics Assignment: Sequence Alignment and Functional Annotation
+### Bioinformatics Assignment
+
+### Session 1: Annotation of coding sequences 
+
+### Authors : Aycel Line DJOUAMA & Dorra SDIRET
+
+### Date : 25/01/2026
+
 ### 1. Formatting a Sequence Collection for BLAST:
 ## Exe1)
 To prepare the database, the following sequence of commands were used:
