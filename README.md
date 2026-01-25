@@ -70,7 +70,7 @@ The following command was executed to generate the iterative profile: psiblast -
 •	Unlike the "one-size-fits-all" approach of BLOSUM62, the PSSM captures the unique evolutionary constraints of the ARF6 family. This allows the search to detect homologs that share critical functional motifs even if their overall sequence identity is low.
 
 ## 4. Making a Hidden Markov Model (HMM) with aligned sequences
-##Exe6)
+## Exe6)
 ### Step 1: Selection and Extraction of High-Scoring Matches
 
 •	The test.faa.blast file was filtered based on the 12th column (bit score) to isolate the Subject IDs (2nd column) of the top hits
