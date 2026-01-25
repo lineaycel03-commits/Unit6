@@ -1,8 +1,10 @@
-# Bioinformatics Assignment Session 1: Annotation of coding sequences
+# Bioinformatics Assignment Session 1
 
 # Authors : Aycel Line DJOUAMA & Dorra SDIRET
 
 # Date : 25/01/2026
+
+## Annotation of coding sequences 
 
 ## 1. Formatting a Sequence Collection for BLAST:
 
