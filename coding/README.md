@@ -1,4 +1,4 @@
-# Bioinformatics Assignment Session 1
+# Bioinformatics Assignment Session 1 Report
 
 # Authors : Aycel Line DJOUAMA & Dorra SDIRET
 
