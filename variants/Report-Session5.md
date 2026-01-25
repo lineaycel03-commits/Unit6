@@ -121,5 +121,24 @@ The exercice 4 is devided to 5 steps and used the Integrative Genomics Viewer (I
 
 ## Exercice 5 : 
 
+In this stage of the analysis, we focused on identifying genetic variation within our sample by processing raw sequencing data into a set of high-confidence variants.
+### Variant Calling with FreeBayes
+We utilized FreeBayes to identify Single Nucleotide Polymorphisms (SNPs) and small Insertions/Deletions (Indels).
+•	The ploidy was set to 2, reflecting the diploid nature of the plant genome under study.
+•	The initial "raw" output in the VCF (Variant Call Format) file contained 31,521 records.
+### Quality Control and Filtering
+To ensure the reliability of the findings and remove potential sequencing artifacts, we performed site-specific filtering using bcftools:
+•	Filter Criterion: We removed records where the quality score was low 
+•	Results: This step successfully filtered the dataset down to 30,490 high-confidence variants.
+•	Variant Composition:
+o	SNPs: 25,441
+o	Indels: 2,395
+### Visual Validation in IGV
+The final filtered VCF was loaded into the Integrative Genomics Viewer (IGV) alongside the reference genome and aligned BAM files to validate specific variants. This allowed for the inspection of:
+•	Genotype (GT): Confirming if specific positions are heterozygous or homozygous.
+
+•	Read Depth (DP): Assessing the number of reads supporting a variant to ensure it isn't an artifact of low coverage.
+
+•	Gene Models: Determining if variants fall within functional regions (exons/introns) of the plant genome.
 
 <img width="1901" height="966" alt="image" src="https://github.com/user-attachments/assets/acad9a55-1d81-44cb-ad7d-8be6a4b268e4" />
