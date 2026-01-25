@@ -9,8 +9,11 @@ gunzip uniprot_Atha.fasta.gz
 
 ## Results: 
 • Total sequences formatted:  15,719 sequences.
+
 • Effect on E-value:  The size of the database (n) is directly proportional to the Expectation Value (E-value) of a BLAST search.
+
 •	The E-value is calculated as E = m x n x 2-S, where m is the query length and S is the bit score.
+
 •	As the number of sequences in our database increases (to 15,719), the probability of finding a random match also increases. Therefore, for any given alignment, the E-value will increase as the database grows, making it harder for a result to be considered statistically "significant" unless the match is very strong
 
 ## 2. Querying the collection with a sample coding sequence
