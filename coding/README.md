@@ -136,6 +136,14 @@ The following command was executed to generate the iterative profile: psiblast -
 ## 5. Annotating function by predicted structural similarity
 ## Exe7)
 
+### Domains Defined by Matched Entries (PDB and Pfam)
+
+<img width="1759" height="383" alt="image" src="https://github.com/user-attachments/assets/7dde7ef8-825e-4bfc-8e6e-8d458e74dc1f" />
+
+### Similar Sequences in AlphaFoldDB
+
+<img width="1110" height="110" alt="image" src="https://github.com/user-attachments/assets/dbdaa1e9-8470-4473-bdbd-a5f66e50dd18" />
+
 ## 6. Annotating function on orthology grounds
 ## Exe8)
 
@@ -151,9 +159,6 @@ The protein **AT1G30330.2** is mapped to high-confidence orthologous groups acro
 •	Identified as an **Auxin Response Factor (ARF)**, a transcription factor that specifically binds to the DNA sequence 5'-TGTCTC-3' in auxin-responsive promoter elements (AuxREs).
 ## 7. Annotating function with Gene Ontology (GO) terms
 ## Exe9)
-
-
-
 
 ### The functional categories of the following GO IDs GO:0009414, GO:0035618, GO:0016491
 
@@ -184,7 +189,7 @@ The protein **AT1G30330.2** is mapped to high-confidence orthologous groups acro
 
  <img width="855" height="400" alt="image" src="https://github.com/user-attachments/assets/c91fb597-2088-4543-9214-f9c7dc01435b" />
 
-
+<img width="1847" height="452" alt="image" src="https://github.com/user-attachments/assets/75e5baff-cef9-402c-b0f0-1c010de6ccd5" />
 
 ### Experimental Statistics
  
