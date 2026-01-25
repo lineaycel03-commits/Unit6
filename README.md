@@ -40,19 +40,28 @@ To see if there are differences in the results retrieved in both searches, we ut
 
 ### Main results 
 •	Several proteins were identified in the blastp results that did not appear in the blastx output, including IAA19_ARATH, REM9_ARATH, IAA5_ARATH, and IAA29_ARATH.
+
 •	Even for identical subject hits like ARFF_ARATH, the bit scores and E-values varied. For instance, the alignment length and bit score for the top hit were higher in the protein-to-protein search compared to the translated search.
+
 •	The blastx search operated within an Effective search space of 4,562,846,490. This is notably larger than the standard protein search space because blastx must translate the nucleotide query into all six possible reading frames.
+
 •	While blastp is more efficient for finding direct matches to known proteins, blastx is a more robust tool for analyzing uncharacterized transcripts. However, the significantly larger search space in blastx leads to higher E-values, meaning a match must be "stronger" to be considered statistically significant compared to a standard blastp search.
+
 ## 3. Producing a sequence profile
 ### Exe 5) 
 The following command was executed to generate the iterative profile: psiblast -db uniprot_Atha.fasta -query test.faa -num_iterations 3 -out_ascii_pssm profile.out
  <img width="611" height="554" alt="image" src="https://github.com/user-attachments/assets/fd615b0b-fc5d-474d-a219-f05b9494dff6" />
 
 •	Analysis of profile.out The PSI-BLAST execution produced a profile.out file containing a Position-Specific Scoring Matrix (PSSM).
+
 •	From the sequences identified in the first round, the program constructs the Position-Specific Scoring Matrix (PSSM). This matrix is then used in subsequent iterations (2 and 3) to find more distant relatives.
+
 •	Upon inspecting the profile.out file using the command: head -n 20 profile.out, a detailed table is visible where each row represents a specific position in the query sequence and each column corresponds to one of the 20 standard amino acids.
+
 •	The numbers within the matrix are log-odds scores. Positive numbers indicate that a specific amino acid is highly conserved at that position within the protein family, while negative numbers suggest it is rarely observed.
+
 •	Unlike the "one-size-fits-all" approach of BLOSUM62, the PSSM captures the unique evolutionary constraints of the ARF6 family. This allows the search to detect homologs that share critical functional motifs even if their overall sequence identity is low.
+
 ## 4. Making a Hidden Markov Model (HMM) with aligned sequences
 ##Exe6)
 ### Step 1: Selection and Extraction of High-Scoring Matches
@@ -71,18 +80,25 @@ The following command was executed to generate the iterative profile: psiblast -
  <img width="945" height="311" alt="image" src="https://github.com/user-attachments/assets/e9b63b23-742c-433e-879d-afc0a40a8d5f" />
 
 •	The model has a length (mlen) of 670 consensus positions derived from an alignment length (alen) of 1361 columns.
+
 •	Calculated at 1.43, representing the non-redundant information content extracted from the 22 sequences.
+
 •	The model shows 0.590 bits per position, which is a measure of how much information the HMM provides over a random background model.
 ### Step 4: Scan the HMM against the collection
 •	The HMM profile was first processed using the hmmpress utility to create the necessary binary auxiliary files.
+
 •	The profile was then queried against the sequence collection using the hmmscan tool, and the results were redirected to a text file.
+
  <img width="746" height="573" alt="image" src="https://github.com/user-attachments/assets/ffd77dc1-f9de-47c0-9405-dfc5ea861344" />
 <img width="748" height="433" alt="image" src="https://github.com/user-attachments/assets/9995cf0c-d84a-4682-83cb-575ea919870d" />
 
  
 •	The HMM used for the search consisted of 670 nodes (consensus positions), providing a comprehensive structural signature of the ARF6 family.
+
 •	The search identified significant hits among the Arabidopsis proteins, which were ranked by their E-values and Bit Scores. Hits that satisfy the reporting thresholds represent high-confidence functional homologs.
+
 •	Unlike the initial BLAST search, this profile-based approach leverages the evolutionary information of 22 aligned sequences, allowing it to detect distant orthologs that maintain the core structural "signature" of the ARF family even if their overall sequence identity is relatively low.
+
 ## 5. Annotating function by predicted structural similarity
 ## Exe7)
 Resource	Entry/ID	Start Residue	End Residue	Probability	Description
@@ -100,8 +116,11 @@ AlphaFoldDB	Q9ZTX8	1	935	100%	Full-length structural prediction of ARF6
 ### eggNOG Orthology Groups
 The protein AT1G30330.2 is mapped to high-confidence orthologous groups across several taxonomic levels:
 •	Primary Orthogroup (OG): 28JYJ@1|root.
+
 •	Taxonomic Levels: It is further categorized under 2QSCZ@2759|Eukaryota, 37P4Z@33090|Viridiplantae, and specifically 3HYYA@3699|Brassicales.
+
 •	Identified as an Auxin Response Factor (ARF), a transcription factor that specifically binds to the DNA sequence 5'-TGTCTC-3' in auxin-responsive promoter elements (AuxREs).
+
 ## 7. Annotating function with Gene Ontology (GO) terms
 ### Exe9)
 
@@ -112,8 +131,11 @@ The protein AT1G30330.2 is mapped to high-confidence orthologous groups across s
 <img width="878" height="268" alt="image" src="https://github.com/user-attachments/assets/d8d9ce3b-3e38-452d-8de3-154b8b01fb5d" />
  
 GO:0016491 : oxidoreductase activity
+
 GO:0035618: root hair
+
 GO:0009414 : response to water deprivation
+
 ### The GO ID and the functional category corresponding to photosynthesis
  <img width="945" height="612" alt="image" src="https://github.com/user-attachments/assets/dae19662-d7ef-416f-a9ee-b69f0d43c98e" />
 
